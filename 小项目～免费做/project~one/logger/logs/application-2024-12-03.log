@@ -1,0 +1,26 @@
+[2024-12-03T16:11:34.242] [ERROR] application - 错误信息 UnauthorizedError: 未授权，不能访问
+    at Object.throw (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa/lib/context.js:97:11)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:66:14
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:44:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:32:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:20:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-log4/koa-logger.js:86:13 {
+  data: '你需要登录后才能访问～'
+}
+[2024-12-03T16:11:34.856] [ERROR] application - 错误信息 UnauthorizedError: 未授权，不能访问
+    at Object.throw (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa/lib/context.js:97:11)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:66:14
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:44:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:32:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/07-koa-log4处理⽇志.js:20:11
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-log4/koa-logger.js:86:13 {
+  data: '你需要登录后才能访问～'
+}

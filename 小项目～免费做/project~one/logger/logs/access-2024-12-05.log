@@ -1,0 +1,7 @@
+[2024-12-05T17:56:39.572] [INFO] access - ::1 - - "GET /favicon.ico HTTP/1.1" 200 11 "http://localhost:3003/user/list" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+[2024-12-05T17:57:15.995] [INFO] access - ::1 - - "GET /user%0A HTTP/1.1" 200 11 "" "PostmanRuntime/7.37.3"
+[2024-12-05T17:57:33.933] [INFO] access - ::1 - - "GET /user%0A/login HTTP/1.1" 200 11 "" "PostmanRuntime/7.37.3"
+[2024-12-05T17:59:02.978] [INFO] access - ::1 - - "POST /user%0A/login HTTP/1.1" 200 11 "" "PostmanRuntime/7.37.3"
+[2024-12-05T18:00:30.644] [INFO] access - ::1 - - "POST /user%0A/login HTTP/1.1" 404 - "" "PostmanRuntime/7.37.3"
+[2024-12-05T18:00:32.300] [INFO] access - ::1 - - "POST /user%0A/login HTTP/1.1" 404 - "" "PostmanRuntime/7.37.3"
+[2024-12-05T18:01:10.924] [INFO] access - ::1 - - "POST /user%0A/login HTTP/1.1" 404 - "" "PostmanRuntime/7.37.3"

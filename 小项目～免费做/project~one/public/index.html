@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel的信息包括文件夹、文件名、文件类型、创建时间</title>
+    <!-- 1、读取指定路径下的文件夹下的所有一级文件夹，页面选择需要的文件夹
+2、循环读取一级文件夹中的文件信息（排除文件夹。只需要文件）输出到Excel
+3、Excel的信息包括文件夹、文件名、文件类型、创建时间
+4、指定文件夹读取命令行的path 参数
+5、使用nodejs
+5、打包成exe可执行文件，打开后自动打开浏览器 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        height: 100vh;
+        background: url(/imgs/bj1@2x.png) no-repeat center center;
+        background-size: cover;
+      }
+      .tip {
+        padding-top: 20%;
+        width: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+      .form {
+        width: 100%;
+      }
+      .input-group {
+        justify-content: center;
+      }
+      input {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tip">
+      <p>1、读取指定路径下的文件夹下的所有一级文件夹，页面输入需要的文件夹</p>
+      <p>
+        2、循环读取一级文件夹中的文件信息（排除文件夹。只需要文件）输出到Excel
+      </p>
+      <p>3、Excel的信息包括文件夹、文件名、文件类型、创建时间</p>
+    </div>
+    <br />
+    <div class="form">
+      <!-- <input type="file" name="file" webkitdirectory directory />
+        -->
+
+      <div class="input-group">
+        <input
+          type="text"
+          name="file"
+          placeholder="请输入文件路径"
+          aria-label="Recipient's username with two button addons"
+        />
+        <button class="btn btn-outline-secondary">提交</button>
+      </div>
+      <!-- <input type="text" name="file" placeholder="请输入文件路径" />
+      <button type="submit">提交</button> -->
+    </div>
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        const file = document.querySelector("input").value;
+        // window.location.href = `/file-to-excel?file=${file}`;
+        let filename = "";
+        fetch(`/file-to-excel`, {
+          method: "post",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ file }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            if (response.headers.get("content-disposition")) {
+              filename = decodeURIComponent(
+                response.headers
+                  .get("content-disposition")
+                  .replace("attachment;filename=", "")
+              );
+              console.log(filename);
+              return response.blob();
+            } else {
+              return response.json();
+            }
+          })
+          .then((blob) => {
+            if (blob.code === 0) {
+              alert(blob.msg);
+              return;
+            }
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement("a");
+            link.href = url;
+            link.setAttribute("download", filename); // 设置下载文件的名称
+            document.body.appendChild(link);
+            link.click();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+        // .then((res) => {
+        //   filename = decodeURIComponent(
+        //     res.headers
+        //       .get("content-disposition")
+        //       .replace("attachment;filename=", "")
+        //   );
+        //   console.log(filename);
+        //   return res.json();
+        // })
+        // .then((data) => {
+        //   console.log(data);
+        //   if (data.code === 0) {
+        //     alert(data.msg);
+        //   }
+        // })
+        // .catch((err) => {
+        //   console.log(err);
+        // });
+      });
+    </script>
+  </body>
+</html>

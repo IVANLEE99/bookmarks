@@ -1,0 +1,101 @@
+[2024-12-09T16:34:11.534] [ERROR] application - 错误信息 PayloadTooLargeError: request entity too large
+    at readStream (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/raw-body/index.js:163:17)
+    at executor (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/raw-body/index.js:120:5)
+    at new Promise (<anonymous>)
+    at getRawBody (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/raw-body/index.js:119:10)
+    at AsyncFunction.module.exports [as form] (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/form.js:40:21)
+    at parseBody (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:103:26)
+    at bodyParser (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:85:25)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32) {
+  expected: 204951,
+  length: 204951,
+  limit: 57344,
+  type: 'entity.too.large'
+}
+[2024-12-09T17:39:21.660] [ERROR] application - 错误信息 Error: ENOENT: no such file or directory, scandir '/Users/youngsdream/Documents/youngs001-test/kick-off'
+    at Object.readdirSync (fs.js:1048:3)
+    at readFilesToExcel (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:12:24)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:52:5
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:377:31)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-static/index.js:53:15) {
+  errno: -2,
+  syscall: 'scandir',
+  code: 'ENOENT',
+  path: '/Users/youngsdream/Documents/youngs001-test/kick-off'
+}
+[2024-12-09T17:43:03.684] [ERROR] application - 错误信息 ReferenceError: ctx is not defined
+    at readFilesToExcel (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:18:9)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:59:5
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:377:31)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-static/index.js:53:15)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+[2024-12-09T17:45:15.875] [ERROR] application - 错误信息 ReferenceError: folders is not defined
+    at readFilesToExcel (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:23:5)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:59:5
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:377:31)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-static/index.js:53:15)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+[2024-12-09T17:55:19.737] [ERROR] application - 错误信息 TypeError: ctx.render is not a function
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/router/file-to-excel.js:53:9
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at /Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@koa/router/lib/router.js:377:31)
+    at dispatch (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-compose/index.js:42:32)
+    at serve (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-static/index.js:53:15)
+    at async bodyParser (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:95:5)
+    at async session (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-session/index.js:41:7)
+[2024-12-09T18:09:01.561] [ERROR] application - 错误信息 SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Object.exports.parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@hapi/bourne/lib/index.js:19:22)
+    at parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:59:19)
+    at AsyncFunction.module.exports [as json] (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:43:20)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async parseBody (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:85:19)
+    at async session (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-session/index.js:41:7) {
+  status: 400,
+  body: '[object Object]'
+}
+[2024-12-09T18:09:21.301] [ERROR] application - 错误信息 SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Object.exports.parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@hapi/bourne/lib/index.js:19:22)
+    at parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:59:19)
+    at AsyncFunction.module.exports [as json] (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:43:20)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async parseBody (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:85:19)
+    at async session (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-session/index.js:41:7) {
+  status: 400,
+  body: '[object Object]'
+}
+[2024-12-09T18:10:32.378] [ERROR] application - 错误信息 SyntaxError: Unexpected token o in JSON at position 1
+    at JSON.parse (<anonymous>)
+    at Object.exports.parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/@hapi/bourne/lib/index.js:19:22)
+    at parse (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:59:19)
+    at AsyncFunction.module.exports [as json] (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/co-body/lib/json.js:43:20)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async parseBody (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-bodyparser/index.js:85:19)
+    at async session (/Users/youngsdream/Documents/youngs001-test/kick-off-koa-/node_modules/koa-session/index.js:41:7) {
+  status: 400,
+  body: '[object Object]'
+}
